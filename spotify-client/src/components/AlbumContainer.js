@@ -1,7 +1,7 @@
 import React from 'react'
 import { useQuery , gql } from '@apollo/client'
 import { Track }   from '../components/Track'
-import CreatePlayList from './CreatePlayList'
+import CreatePlayList from './PlayListForm'
 
 
 const ALL_ALBUMS = gql`

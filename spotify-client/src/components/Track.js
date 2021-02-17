@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import CreatePlayList from "./CreatePlayList";
+import CreatePlayList from "./PlayListForm";
 
 
 export function Track({ item }) {
-
-
-  const postToSpotify = (data) => {
+    const postToSpotify = (data) => {
     let tracks = `https://api.spotify.com/v1/playlists/${process.env.REACT_APP_PLAYLIST_ID}/tracks`;
     fetch(tracks, {
       method: "post",
@@ -30,9 +28,8 @@ export function Track({ item }) {
      <div className="item_container">
        
        <div className="track_name">
-        <p>{item.name}</p>
-        <p>{item.uri}</p>
-      </div>
+          <p>{item.name}</p>
+       </div>
       
       <div className="track_id"></div>
       
@@ -42,8 +39,6 @@ export function Track({ item }) {
         </button>
         <br />
       </div>
-      
-      <br />
     </div>
   );
 }
